@@ -10,6 +10,7 @@ export interface Blog {
 
 export const useBlogs = () => {
   const [blogsList, setBlogsList] = useState<Blog[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -17,9 +18,10 @@ export const useBlogs = () => {
       const blogsList = await data.json();
 
       setBlogsList(blogsList);
+      setIsLoading(false);
     }
     fetchBlogs();
   }, [])
 
-  return { blogsList }
+  return { blogsList, isLoading }
 }
