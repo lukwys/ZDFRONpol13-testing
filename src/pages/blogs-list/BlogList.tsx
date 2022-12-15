@@ -12,11 +12,12 @@ const { blogsList } = useBlogs();
       <h1>My blog</h1>
       <Container>
         <Row>
-          {blogsList.map((blog, index) => (
+          {blogsList.length ? blogsList.map((blog, index) => (
             <Col>
               <BlogCard blog={blog} key={index} />
             </Col>
-          ))}
+          )) : <p>There is no blogs</p>}
+          {}
         </Row>
       </Container>
     </Container>
