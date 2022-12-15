@@ -4,7 +4,7 @@ export interface Blog {
   id: number,
   title: string,
   shortText: string,
-  loggText: string,
+  longText: string,
   img: string,
 }
 

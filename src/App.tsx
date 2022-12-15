@@ -1,4 +1,4 @@
-import { BlogList } from './components/pages/blogs-list/BlogList';
+import { BlogList } from './pages/blogs-list/BlogList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
